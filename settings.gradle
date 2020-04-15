@@ -1,0 +1,2 @@
+include ':app', ':clicklesson', ':svetofor', ':turn_ecran', ':ekran', ':sherlock', ':newlesson', ':popupmenu', ':buttons', ':contextmenu', ':animation', ':intentfilter', ':newapp', ':googlemap', ':contextmenu_2', ':counter', ':menuforgame'
+rootProject.name='My project'

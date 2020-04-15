@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Локализованное приложение</string>
+    <string name="menu_start_game">Начало игры</string>
+    <string name="menu_quick_game">Быстрая игра</string>
+    <string name="menu_settings_game">Настройки игры</string>
+    <string name="menu_about">О игре</string>
+    <string name="menu_exit">Выход</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/backgroundmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/start"
+            style="@style/MenuFont"
+            android:layout_gravity="right"
+            android:text="@string/menu_start_game" />
+
+        <TextView
+            android:id="@+id/quick"
+            style="@style/MenuFont"
+            android:text="@string/menu_quick_game" />
+
+        <TextView
+            android:id="@+id/settings"
+            style="@style/MenuFont"
+            android:text="@string/menu_settings_game"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:id="@+id/about"
+            style="@style/MenuFont"
+            android:text="@string/menu_about" />
+
+        <TextView
+            android:id="@+id/exit"
+            style="@style/ExitFont"
+            android:text="@string/menu_exit" />
+    </LinearLayout>
+
+</RelativeLayout>

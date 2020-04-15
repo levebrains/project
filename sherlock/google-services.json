@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "522857772425",
+    "firebase_url": "https://my-project-3bab0.firebaseio.com",
+    "project_id": "my-project-3bab0",
+    "storage_bucket": "my-project-3bab0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522857772425:android:377a3529942fcfd0581d58",
+        "android_client_info": {
+          "package_name": "game.project.sherlock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522857772425-9c75dk6nadahamrmfegh3hj828gj603l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "game.project.sherlock",
+            "certificate_hash": "d37c92a583dba848967150af65e4598bf277846f"
+          }
+        },
+        {
+          "client_id": "522857772425-h5k0v33lnololavgmbje8pcn80ul5fh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC70LgntDhwwQ-7Fw161C1YRh-VU8JXQKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522857772425-h5k0v33lnololavgmbje8pcn80ul5fh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
