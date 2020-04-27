@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android2dgame" />
+            <option value="$PROJECT_DIR$/animation" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/buttons" />
+            <option value="$PROJECT_DIR$/clicklesson" />
+            <option value="$PROJECT_DIR$/contextmenu" />
+            <option value="$PROJECT_DIR$/contextmenu_2" />
+            <option value="$PROJECT_DIR$/counter" />
+            <option value="$PROJECT_DIR$/ekran" />
+            <option value="$PROJECT_DIR$/googlemap" />
+            <option value="$PROJECT_DIR$/intentfilter" />
+            <option value="$PROJECT_DIR$/menuforgame" />
+            <option value="$PROJECT_DIR$/newapp" />
+            <option value="$PROJECT_DIR$/newlesson" />
+            <option value="$PROJECT_DIR$/picasso" />
+            <option value="$PROJECT_DIR$/picasso2" />
+            <option value="$PROJECT_DIR$/popupmenu" />
+            <option value="$PROJECT_DIR$/sherlock" />
+            <option value="$PROJECT_DIR$/svetofor" />
+            <option value="$PROJECT_DIR$/test" />
+            <option value="$PROJECT_DIR$/turn_ecran" />
+          </set>
+        </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>
