@@ -5,10 +5,10 @@ import android.graphics.Canvas;
 
 public class ChibiCharacter extends GameObject {
 
-    private static final int ROW_TOP_TO_BOTTOM = 0;
-    private static final int ROW_RIGHT_TO_LEFT = 1;
-    private static final int ROW_LEFT_TO_RIGHT = 2;
-    private static final int ROW_BOTTOM_TO_TOP = 3;
+    private static final int ROW_TOP_TO_BOTTOM = 2;
+    private static final int ROW_RIGHT_TO_LEFT = 3;
+    private static final int ROW_LEFT_TO_RIGHT = 1;
+    private static final int ROW_BOTTOM_TO_TOP = 0;
 
     // Row index of Image are being used.
     private int rowUsing = ROW_LEFT_TO_RIGHT;

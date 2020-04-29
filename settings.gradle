@@ -1,3 +1,4 @@
 include ':app', ':clicklesson', ':svetofor', ':turn_ecran', ':ekran', ':sherlock', ':newlesson', ':popupmenu', ':buttons', ':contextmenu', ':animation', ':intentfilter', ':newapp', ':googlemap', ':contextmenu_2', ':counter', ':menuforgame', ':picasso', ':picasso2', ':test'
 rootProject.name='My project'
 include ':android2dgame'
+include ':lib_project'
