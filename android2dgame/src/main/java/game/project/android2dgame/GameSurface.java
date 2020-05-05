@@ -1,6 +1,5 @@
 package game.project.android2dgame;
 
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +9,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
@@ -17,6 +17,7 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread gameThread;
 
     private final List<ChibiCharacter> chibiList = new ArrayList<ChibiCharacter>();
+    private final List<Explosion> explosionList = new ArrayList<Explosion>();
 
     public GameSurface(Context context)  {
         super(context);
@@ -24,21 +25,35 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
         // Make Game Surface focusable so it can handle events.
         this.setFocusable(true);
 
-        // Set callback.
+        // Sét callback.
         this.getHolder().addCallback(this);
     }
 
-    public void update()  {
-        for(ChibiCharacter chibi: chibiList) {
-            chibi.update();
-        }
-    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
+
             int x=  (int)event.getX();
             int y = (int)event.getY();
+
+            Iterator<ChibiCharacter> iterator= this.chibiList.iterator();
+
+            while(iterator.hasNext()) {
+                ChibiCharacter chibi = iterator.next();
+                if( chibi.getX() < x && x < chibi.getX() + chibi.getWidth()
+                        && chibi.getY() < y && y < chibi.getY()+ chibi.getHeight())  {
+                    // Remove the current element from the iterator and the list.
+                    iterator.remove();
+
+                    // Create Explosion object.
+                    Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.explosion);
+                    Explosion explosion = new Explosion(this, bitmap,chibi.getX(),chibi.getY());
+
+                    this.explosionList.add(explosion);
+                }
+            }
+
 
             for(ChibiCharacter chibi: chibiList) {
                 int movingVectorX =x-  chibi.getX() ;
@@ -50,12 +65,36 @@ public class GameSurface extends SurfaceView implements SurfaceHolder.Callback {
         return false;
     }
 
+    public void update()  {
+        for(ChibiCharacter chibi: chibiList) {
+            chibi.update();
+        }
+        for(Explosion explosion: this.explosionList)  {
+            explosion.update();
+        }
+
+        Iterator<Explosion> iterator= this.explosionList.iterator();
+        while(iterator.hasNext())  {
+            Explosion explosion = iterator.next();
+
+            if(explosion.isFinish()) {
+                // If explosion finish, Remove the current element from the iterator & list.
+                iterator.remove();
+                continue;
+            }
+        }
+    }
+
     @Override
     public void draw(Canvas canvas)  {
         super.draw(canvas);
 
         for(ChibiCharacter chibi: chibiList)  {
             chibi.draw(canvas);
+        }
+
+        for(Explosion explosion: this.explosionList)  {
+            explosion.draw(canvas);
         }
 
     }

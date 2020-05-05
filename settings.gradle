@@ -2,3 +2,6 @@ include ':app', ':clicklesson', ':svetofor', ':turn_ecran', ':ekran', ':sherlock
 rootProject.name='My project'
 include ':android2dgame'
 include ':lib_project'
+include ':touch'
+include ':bitmapread'
+include ':move'

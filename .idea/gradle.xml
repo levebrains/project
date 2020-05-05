@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/android2dgame" />
             <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bitmapread" />
             <option value="$PROJECT_DIR$/buttons" />
             <option value="$PROJECT_DIR$/clicklesson" />
             <option value="$PROJECT_DIR$/contextmenu" />
@@ -24,6 +25,7 @@
             <option value="$PROJECT_DIR$/intentfilter" />
             <option value="$PROJECT_DIR$/lib_project" />
             <option value="$PROJECT_DIR$/menuforgame" />
+            <option value="$PROJECT_DIR$/move" />
             <option value="$PROJECT_DIR$/newapp" />
             <option value="$PROJECT_DIR$/newlesson" />
             <option value="$PROJECT_DIR$/picasso" />
@@ -32,6 +34,7 @@
             <option value="$PROJECT_DIR$/sherlock" />
             <option value="$PROJECT_DIR$/svetofor" />
             <option value="$PROJECT_DIR$/test" />
+            <option value="$PROJECT_DIR$/touch" />
             <option value="$PROJECT_DIR$/turn_ecran" />
           </set>
         </option>
