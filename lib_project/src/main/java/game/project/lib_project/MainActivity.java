@@ -1,7 +1,10 @@
 package game.project.lib_project;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,24 +12,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class MainActivity extends AppCompatActivity {
-    RetrofitApi retrofitApi;
+    RetrofitApi retrofitApi; // запросы к сайтам
     Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerView); // отображение данных
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
-        adapter = new Adapter(this);
+        adapter = new Adapter(this); // соединяет список с разметкой
         recyclerView.setAdapter(adapter);
-        getmovie();
+        /*getmovie(); */
+        List<Movie> movie = new ArrayList<>(); // сипсок, куда вводится результат запроса к серверу
+        for (int i = 0; i < 25; i++){
+            // ограниечение на количество выводимых фильмов
+            movie.add(new Movie());
+        }
+        adapter.setMovieList(movie);
     }
+    /*
     private void getmovie () {
         MoviesApiServices moviesApiService=retrofitApi.getClient().create(MoviesApiServices.class);
         Call<ResponceModel> call = moviesApiService.getPopularMovies("eb37bafc5fe27ad9ab86a74e72812c06"); // ключ доступа к серверу
@@ -43,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
             } // ответ в случае неудачной попытки
         });
+    } */
+    public static class MovieViewHolder extends RecyclerView.ViewHolder{
+        public ImageView imageView;
+        public MovieViewHolder(@NonNull View itemView) {
+            super(itemView);
+            imageView =(ImageView) itemView.findViewById(R.id.imageView);
+        }
+
     }
 }
