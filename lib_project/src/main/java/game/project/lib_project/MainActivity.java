@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    RetrofitApi retrofitApi; // запросы к сайтам
+    /*RetrofitApi retrofitApi; // запросы к сайтам */
     Adapter adapter;
 
     @Override
